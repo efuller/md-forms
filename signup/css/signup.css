@@ -1,0 +1,79 @@
+body {
+	background: url(../../images/signup-c.jpg) no-repeat center center;
+	background-size: cover;
+}
+
+input,
+input[type="text"],
+input[type="password"] {
+	background: transparent;
+	border-color: rgba(255, 193, 7, 0.4);
+}
+
+input:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+select:focus {
+	border-color: rgba(255,193,7, .8);
+}
+
+input[type="submit"] {
+	background: #FFC107;
+	color: rgba(44,46,9, 0.85);
+	margin-top: 30px;
+}
+
+input[type="submit"]:hover,
+input[type="submit"]:active {
+	background: #ffa000;
+
+	color: rgba(44,46,9, 0.85);
+	margin-top: 30px;
+}
+
+select {
+	background: url(/images/arrow-down-signup.svg) no-repeat right center;
+	border-color: rgba(255, 193, 7, 0.4);
+	color: rgba(232,145,30, 0.8);
+}
+
+/* Placeholders */
+input::-webkit-input-placeholder {
+	color: rgba(232,145,30, 0.8);
+}
+
+input:-moz-placeholder {
+	color: rgba(232,145,30, 0.8);
+}
+
+input::-moz-placeholder {
+	color: rgba(232,145,30, 0.8);
+}
+
+input:-ms-input-placeholder {
+	color: rgba(232,145,30, 0.8);
+}
+
+h1,
+label {
+	color: #FFC107;
+}
+
+h1 {
+	font-size: 30px;
+	margin-bottom: 55px;
+	margin-top: 0;
+	text-align: center;
+}
+
+.page-content {
+	display: flex;
+	align-items: center;
+	min-height: 100vh;
+	padding: 75px 30px;
+}
+
+.form-container {
+	background: rgba(44,46,9, 0.85);
+	padding: 55px 50px;
+}
