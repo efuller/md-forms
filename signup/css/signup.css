@@ -8,6 +8,7 @@ input[type="text"],
 input[type="password"] {
 	background: transparent;
 	border-color: rgba(255, 193, 7, 0.4);
+	color: #FFC107;
 }
 
 input:focus,
