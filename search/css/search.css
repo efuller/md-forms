@@ -1,0 +1,82 @@
+h1 {
+	color: #ffffff;
+	font-size: 48px;
+	margin-top: 0;
+	padding: 30px;
+	text-shadow: 2px 2px 10px rgba(0,0,0, 0.6);;
+}
+
+input[type="submit"],
+input[type="text"],
+select {
+	background-color: #ffffff;
+	color: #484848;
+	font-size: 16px;
+	height: 52px;
+	margin-right: -2px;
+	padding-bottom: 0;
+	padding-top: 0;
+}
+
+input[type="text"] {
+	width: 380px;
+}
+
+.field-group.location input {
+	border-bottom-right-radius: 0;
+	border-top-right-radius: 0;
+}
+
+.field-group.species select {
+	border-radius: 0;
+}
+
+.field-group.search input {
+	background-color: #388E3C;
+	border: 2px solid #388E3C;
+	border-bottom-left-radius: 0;
+	border-top-left-radius: 0;
+	color: #ffffff;
+	font-weight: 300;
+	letter-spacing: 1px;
+	margin-left: -2px;
+}
+
+.field-group.search input:hover,
+.field-group.search input:active {
+	background-color: #4CAF50;
+}
+
+.form-container {
+	background-color: rgba(0,0,0, 0.6);
+	border-radius: 2px;
+	box-shadow: none;
+	display: flex;
+	justify-content: center;
+	max-width: 100%;
+	padding: 32px;
+	width: 100%;
+}
+
+.form-group {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.field-group {
+	float: left;
+	margin-bottom: 0;
+}
+
+.hero {
+	background: url(../images/search-c.jpg) no-repeat center center;
+	background-size: cover;
+	position: relative;
+}
+
+.hero-content {
+	align-items: center;
+	display: flex;
+	height: 500px;
+	justify-content: center;
+}
