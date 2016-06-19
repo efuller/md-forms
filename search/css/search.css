@@ -28,6 +28,7 @@ input[type="text"] {
 }
 
 .field-group.species select {
+	background: #ffffff url(../images/arrow-down.svg) no-repeat right center;
 	border-radius: 0;
 }
 
