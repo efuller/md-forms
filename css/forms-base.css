@@ -187,6 +187,11 @@ input[type="checkbox"]:checked + label:after {
 	border-color: #c9c9c9;
 }
 
+input[type="range"] {
+	vertical-align: middle;
+	width: 100%;
+}
+
 /* Placeholders */
 input::-webkit-input-placeholder {
 	opacity: .6;

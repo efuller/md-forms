@@ -2,12 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>MD Profile Card</title>
+    <title>Login</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="profile-card.css">
+    <link rel="stylesheet" href="../css/forms-base.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
-<h1>Here is the main page.</h1>
+<div class="form-container">
+    <h1>Login</h1>
+    <form>
+        <div class="form-row">
+            <div class="field-group">
+                <label for="username">Username:</label>
+                <input id="username" type="text" name="username" placeholder="Username">
+            </div>
+            <div class="field-group">
+                <label for="password">Password</label>
+                <input id="password" type="password" name="password" placeholder="Password">
+            </div>
+            <div class="field-group">
+                <input id="remember" type="checkbox" name="remember">
+                <label for="remember">Stay logged in.</label>
+            </div>
+            <div class="field-group">
+                <input type="submit" value="Submit">
+            </div>
+        </div><!-- .form-row -->
+    </form>
+</div>
 </body>
 </html>

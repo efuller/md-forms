@@ -13,15 +13,15 @@
     <div class="form-row">
         <div class="field-group">
             <label for="first-name">First Name</label>
-            <input type="text" name="first-name" placeholder="First Name">
+            <input id="first-name" type="text" name="first-name" placeholder="First Name">
         </div>
         <div class="field-group">
             <label for="last-name">Last Name</label>
-            <input type="text" name="last-name" placeholder="Last Name">
+            <input id="last-name" type="text" name="last-name" placeholder="Last Name">
         </div>
         <div class="field-group">
             <label for="password">Password</label>
-            <input type="password" name="password">
+            <input id="password" type="password" name="password">
         </div>
         <div class="field-group">
             <input type="submit" value="Submit">
@@ -34,7 +34,7 @@
         </div>
         <div class="field-group">
             <label for="email">Email</label>
-            <input type="email" name="email" placeholder="Email Address">
+            <input id="email" type="email" name="email" placeholder="Email Address">
         </div>
     </div>
     <div class="form-row">
@@ -97,8 +97,8 @@
             </div>
         </div>
         <div class="field-group">
-            <label for="password">Password</label>
-            <input type="password" name="password">
+            <label for="password1">Password</label>
+            <input id="password1" type="password" name="password">
         </div>
         <div class="field-group">
             <input type="submit" value="Submit">
@@ -116,15 +116,23 @@
             <input type="checkbox" id="checkbox2" name="checkbox">
             <label for="checkbox2">Checkbox 2</label>
         </div>
+        <div class="field-group">
+            <label for="red">Red</label>
+            <input id="red" type="range" name="red" min="0" max="255" step="5">
+        </div>
+        <div class="field-group">
+            <label for="green">Green</label>
+            <input id="green" type="range" name="green" min="0" max="255" step="5">
+        </div>
         <fieldset>
             <legend>Date & Time</legend>
             <div class="field-group">
                 <label for="date">Date</label>
-                <input type="date" name="date">
+                <input id="date" type="date" name="date">
             </div>
             <div class="field-group">
                 <label for="time">Time</label>
-                <input type="time" name="time">
+                <input id="time" type="time" name="time">
             </div>
         </fieldset>
         <div class="field-group">
@@ -147,7 +155,7 @@
         </div>
         <div class="field-group">
             <label for="tel">Telephone</label>
-            <input type="tel" name="tel" placeholder="(123) 456-7890">
+            <input id="tel" type="tel" name="tel" placeholder="(123) 456-7890">
         </div>
         <div class="field-group">
             <input type="submit" value="Submit" class="full-width">

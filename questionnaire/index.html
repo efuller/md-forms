@@ -2,12 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>MD Profile Card</title>
+    <title>Questionnaire</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="profile-card.css">
+    <link rel="stylesheet" href="../css/forms-base.css">
+    <link rel="stylesheet" href="css/questionnaire.css">
+    <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
-<h1>Here is the main page.</h1>
+<div class="form-container">
+    <h1>Questionnaire</h1>
+    <form>
+        <div class="form-row">
+            <fieldset>
+                <legend>What progressive metal band do you like most?</legend>
+                <div class="field-group">
+                    <input id="dream-theater" type="radio" name="band" value="dream-theater">
+                    <label for="dream-theater">Dream Theater</label>
+                    <input id="evergrey" type="radio" name="band" value="evergrey">
+                    <label for="evergrey">Evergrey</label>
+                    <input id="circus-maximus" type="radio" name="band" value="circus-maximus">
+                    <label for="circus-maximus">Circus Maximus</label>
+                    <input id="periphery" type="radio" name="band" value="periphery">
+                    <label for="periphery">Periphery</label>
+                    <input id="other" type="radio" name="band" value="other">
+                    <label for="other">Other</label>
+                    <input id="other-text" type="text" name="band" placeholder="If other, enter band here.">
+                </div>
+                <div class="field-group">
+                    <input type="submit" value="Submit">
+                </div>
+            </fieldset>
+        </div><!-- .form-row -->
+    </form>
+</div>
 </body>
 </html>
