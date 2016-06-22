@@ -33,7 +33,7 @@ input[type="submit"]:active {
 }
 
 select {
-	background: url(/images/arrow-down-signup.svg) no-repeat right center;
+	background: url(../images/arrow-down-signup.svg) no-repeat right center;
 	border-color: rgba(255, 193, 7, 0.4);
 	color: rgba(232,145,30, 0.8);
 }
