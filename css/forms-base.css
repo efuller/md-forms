@@ -23,7 +23,6 @@ label.inline {
 
 fieldset {
 	border: 2px solid #e0e0e0;
-	margin-bottom: 48px;
 	padding: 24px;
 }
 
@@ -33,6 +32,7 @@ select {
 	border-radius: 2px;
 	display: block;
 	font-size: 18px;
+	height: 56px;
 	outline: none;
 	padding: 10px 32px 10px 15px;
 	position: relative;
@@ -99,10 +99,11 @@ a.button {
 	font-family: "Open Sans", "Helvetica Neue", Arial, Helvetica, Verdana, sans-serif;
 	font-size:14px;
 	font-weight: 600;
+	letter-spacing: 1px;
 	outline: none;
 	padding: 12px 32px;
 	text-transform: uppercase;
-	transition: background-color 0.3s ease;
+	transition: opacity 0.3s ease;
 	vertical-align: middle;
 }
 
@@ -117,7 +118,8 @@ button:hover,
 button:active,
 .button:hover,
 .button:active {
-	background-color: #cccccc;
+	background-color: #484848;
+	opacity: 0.95;
 }
 
 /* Full-width Buttons */
@@ -222,23 +224,34 @@ a.button {
 	margin-left: 16px;
 }
 
-.form-row {
+.form-row-group {
 	margin-bottom: 48px;
+}
+
+.form-row {
+	margin-bottom: 24px;
+}
+
+.form-row:after {
+	content: '';
+	display: table;
+	clear: both;
 }
 
 .form-row:last-of-type {
 	margin-bottom: 0;
 }
 
-.field-group {
-	margin-bottom: 24px;
-}
-
-.field-group:last-of-type {
+.form-row:last-of-type {
 	margin-bottom: 0;
 }
 
-.field-inline {
-	display: inline-block;
+.field-group-inline {
+	float: left;
+	margin-right: 5px;
+}
+
+.field-group-inline label {
+	display: block;
 	width: auto;
 }
