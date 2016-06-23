@@ -6,15 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="../css/forms-base.css">
-    <link rel="stylesheet" href="css/shipping-billing.css">
     <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="css/shipping-billing.css">
 </head>
 <body>
+<section class="hero">
+    <h1>Shipping and Billing Information</h1>
+    <a href="../../" class="hero-home-link">Forms Home</a>
+</section>
 <div class="form-container">
-    <h1>Ship It!</h1>
     <form>
         <div class="form-row">
-            <fieldset>
+            <fieldset class="billing-info">
                 <legend>Billing information</legend>
                 <div class="field-group">
                     <label for="first-name">First Name</label>
@@ -25,39 +28,39 @@
                     <input id="last-name" type="text" name="last-name" placeholder="Last Name">
                 </div>
                 <div class="field-group">
-                    <label for="address-1">Last Name</label>
+                    <label for="address-1">Address Line 1</label>
                     <input id="address-1" type="text" name="last-name" placeholder="Last Name">
                 </div>
                 <div class="field-group">
-                    <label for="address-2">Last Name</label>
+                    <label for="address-2">Address Line 2</label>
                     <input id="address-2" type="text" name="last-name" placeholder="Last Name">
                 </div>
-                <div class="field-group">
-                    <label for="city">Last Name</label>
-                    <input id="city" type="text" name="last-name" placeholder="Last Name">
+                <div class="field-group-inline">
+                    <label for="city">City</label>
+                    <input id="city" type="text" class="field-inline" name="last-name" placeholder="Last Name">
                 </div>
-                <div class="field-group">
-                    <label for="state">Last Name</label>
-                    <select id="state" name="state">
+                <div class="field-group-inline">
+                    <label for="state">State</label>
+                    <select id="state" name="state" class="field-inline">
                         <option>State</option>
                     </select>
                 </div>
-                <div class="field-group">
-                    <label for="zip">Last Name</label>
-                    <input id="zip" type="text" name="last-name" placeholder="Last Name">
+                <div class="field-group-inline">
+                    <label for="zip">Zip</label>
+                    <input id="zip" type="text" class="field-inline" name="last-name" placeholder="Last Name">
                 </div>
                 <div class="field-group">
-                    <label for="country">Last Name</label>
+                    <label for="country">Country</label>
                     <select id="country" name="last-name">
                         <option>Country</option>
                     </select>
                 </div>
             </fieldset>
-            <div class="field-group">
+            <div class="field-group same-info">
                 <input id="same-info" type="checkbox">
-                <label for="same-info">Your shipping information is the same as your billing information.</label>
+                <label for="same-info">Shipping information is the same as billing information.</label>
             </div>
-            <fieldset>
+            <fieldset class="shipping-info">
                 <legend>Shipping information</legend>
                 <div class="field-group">
                     <label for="billing-first-name">First Name</label>

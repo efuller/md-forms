@@ -1,0 +1,42 @@
+.hero {
+	background-color: #F57C00;
+}
+
+.hero h1 {
+	color: #ffffff;
+}
+
+.hero h1:before {
+	background-color: #ffffff;
+}
+
+.hero-home-link {
+	color: #ffffff;
+}
+
+.billing-info {
+	border-width: 0;
+	margin-bottom: 15px;
+	padding: 0;
+}
+
+.billing-info legend {
+	font-size: 36px;
+	padding-bottom: 20px;
+	padding-left: 0;
+}
+
+.field-group.same-info {
+	padding: 20px 0;
+}
+
+.shipping-info {
+	border-width: 0;
+	padding: 0;
+}
+
+.shipping-info legend {
+	font-size: 36px;
+	padding-bottom: 20px;
+	padding-left: 0;
+}

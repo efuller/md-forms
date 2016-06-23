@@ -1,0 +1,45 @@
+body {
+	background-color: #ecf0f1;
+}
+
+.form-container {
+	background-color: #ffffff;
+	padding: 45px 32px;
+}
+
+fieldset {
+	margin-bottom: 0;
+}
+
+legend {
+	font-weight: 700;
+}
+
+input[type="radio"]:not(:checked) + label:before,
+input[type="radio"]:not(:checked) + label:after,
+input[type="radio"]:checked + label:before,
+input[type="radio"]:checked + label:after {
+	border: 2px solid #34495e;
+}
+
+input[type="radio"]:checked + label:after {
+	background: #34495e;
+	border-color: #34495e;
+}
+
+input[type="text"].other {
+	margin-left: 35px;
+	margin-top: 5px;
+	width: 90%;
+}
+
+input[type="submit"] {
+	background-color: #34495e;
+	color: #ffffff;
+	letter-spacing: 1px;
+}
+
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+	background-color: #34495e;
+}

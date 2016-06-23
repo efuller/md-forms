@@ -6,12 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="../css/forms-base.css">
-    <link rel="stylesheet" href="css/questionnaire.css">
     <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="css/questionnaire.css">
 </head>
 <body>
-<div class="form-container">
+<section class="hero">
     <h1>Questionnaire</h1>
+    <a href="../../" class="hero-home-link">Forms Home</a>
+</section>
+<div class="form-container">
     <form>
         <div class="form-row">
             <fieldset>
@@ -27,7 +30,7 @@
                     <label for="periphery">Periphery</label>
                     <input id="other" type="radio" name="band" value="other">
                     <label for="other">Other</label>
-                    <input id="other-text" type="text" name="band" placeholder="If other, enter band here.">
+                    <input id="other-text" type="text" class="other" name="band" placeholder="If other, enter band here.">
                 </div>
                 <div class="field-group">
                     <input type="submit" value="Submit">
