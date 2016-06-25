@@ -58,7 +58,8 @@ input[type="email"],
 input[type="password"],
 input[type="date"],
 input[type="time"],
-input[type="tel"] {
+input[type="tel"],
+input[type="number"] {
 	border: 2px solid #e0e0e0;
 	border-radius: 2px;
 	display: inline-block;
@@ -118,8 +119,7 @@ button:hover,
 button:active,
 .button:hover,
 .button:active {
-	background-color: #484848;
-	opacity: 0.95;
+	opacity: 0.7;
 }
 
 /* Full-width Buttons */
@@ -211,6 +211,10 @@ input:-ms-input-placeholder {
 	opacity: .6;
 }
 
+.clear {
+	clear: both;
+}
+
 /* Style a tag as button */
 a.button {
 	display: inline;
@@ -244,6 +248,18 @@ a.button {
 
 .form-row:last-of-type {
 	margin-bottom: 0;
+}
+
+/* Two column forms! */
+.form-row.two-column {
+	float: left;
+	margin-right: 2%;
+	width: 48%;
+}
+
+.form-row.two-column.last {
+	margin-right: 0;
+	width: 50%;
 }
 
 .field-group-inline {
