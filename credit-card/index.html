@@ -6,70 +6,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="../css/forms-base.css">
-    <link rel="stylesheet" href="css/cred-card.css">
     <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="css/credit-card.css">
 </head>
 <body>
+<section class="hero">
+    <h1>Credit Card Information</h1>
+    <a href="../../" class="hero-home-link">Forms Home</a>
+</section>
 <div class="form-container">
-    <h1>Enter Your Credit Card Information</h1>
     <form>
         <div class="form-row">
-            <div class="field-group">
-                <label for="full-name">Full Name</label>
-                <input id="full-name" type="text" name="full-name" placeholder="John Doe">
+            <div class="form-row">
+                <div class="field-group">
+                    <label for="full-name">Full Name</label>
+                    <input id="full-name" type="text" name="full-name" placeholder="John Doe">
+                </div>
             </div>
-            <div class="field-group">
-                <label for="card-number">Card Number</label>
-                <input id="card-number" type="text" name="card-number" required maxlength="19" size="19" placeholder="1234 3456 2467 2346">
+            <div class="form-row">
+                <div class="field-group-inline credit-card">
+                    <label for="card-number">Card Number</label>
+                    <input id="card-number" class="field-inline" type="text" name="card-number" required maxlength="19" size="19"
+                           placeholder="1234 3456 2467 2346">
+                </div>
+                <div class="field-group-inline last">
+                    <label for="cvc">CSV</label>
+                    <input id="cvc" class="field-inline" type="text" name="cvc" required maxlength="3" size="3" placeholder="123">
+                </div>
             </div>
-            <div class="field-group">
-                <label for="cvc">Card Number</label>
-                <input id="cvc" type="text" name="cvc" required maxlength="3" size="3" placeholder="123">
+            <div class="form-row">
+                <p>Expiration</p>
+                <div class="field-group-inline">
+                    <label for="month">Month</label>
+                    <select name="month" id="month" class="field-inline">
+                        <option value="01">January</option>
+                        <option value="02">February</option>
+                        <option value="03">March</option>
+                        <option value="04">April</option>
+                        <option value="05">May</option>
+                        <option value="06">June</option>
+                        <option value="07">July</option>
+                        <option value="08">August</option>
+                        <option value="09">September</option>
+                        <option value="10">October</option>
+                        <option value="11">November</option>
+                        <option value="12">December</option>
+                    </select>
+                </div>
+                <div class="field-group-inline">
+                    <label for="Year">Year</label>
+                    <select name="year" id="year" class="field-inline">
+                        <option>Year</option>
+                        <option value="2016">2016</option>
+                        <option value="2017">2017</option>
+                        <option value="2018">2018</option>
+                        <option value="2019">2019</option>
+                        <option value="2020">2020</option>
+                        <option value="2021">2021</option>
+                        <option value="2022">2022</option>
+                        <option value="2023">2023</option>
+                        <option value="2024">2024</option>
+                        <option value="2025">2025</option>
+                        <option value="2026">2026</option>
+                        <option value="2027">2027</option>
+                        <option value="2028">2028</option>
+                        <option value="2029">2029</option>
+                        <option value="2030">2030</option>
+                        <option value="2031">2031</option>
+                        <option value="2032">2032</option>
+                        <option value="2033">2033</option>
+                        <option value="2034">2034</option>
+                        <option value="2035">2035</option>
+                    </select>
+                </div>
             </div>
-            <div class="field-group">
-                <label for="month">Expiration</label>
-                <select name="month" id="month">
-                    <option value="01">January</option>
-                    <option value="02">February</option>
-                    <option value="03">March</option>
-                    <option value="04">April</option>
-                    <option value="05">May</option>
-                    <option value="06">June</option>
-                    <option value="07">July</option>
-                    <option value="08">August</option>
-                    <option value="09">September</option>
-                    <option value="10">October</option>
-                    <option value="11">November</option>
-                    <option value="12">December</option>
-                </select>
-            </div>
-            <div class="field-group">
-                <select name="year" id="year">
-                    <option>Year</option>
-                    <option value="2016">2016</option>
-                    <option value="2017">2017</option>
-                    <option value="2018">2018</option>
-                    <option value="2019">2019</option>
-                    <option value="2020">2020</option>
-                    <option value="2021">2021</option>
-                    <option value="2022">2022</option>
-                    <option value="2023">2023</option>
-                    <option value="2024">2024</option>
-                    <option value="2025">2025</option>
-                    <option value="2026">2026</option>
-                    <option value="2027">2027</option>
-                    <option value="2028">2028</option>
-                    <option value="2029">2029</option>
-                    <option value="2030">2030</option>
-                    <option value="2031">2031</option>
-                    <option value="2032">2032</option>
-                    <option value="2033">2033</option>
-                    <option value="2034">2034</option>
-                    <option value="2035">2035</option>
-                </select>
-            </div>
-            <div class="field-group">
-                <input type="submit" value="Submit">
+            <div class="form-row">
+                <div class="field-group">
+                    <input type="submit" value="Submit">
+                </div>
             </div>
         </div>
     </form>

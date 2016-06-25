@@ -267,6 +267,10 @@ a.button {
 	margin-right: 5px;
 }
 
+.field-group-inline.last {
+	margin-right: 0;
+}
+
 .field-group-inline label {
 	display: block;
 	width: auto;

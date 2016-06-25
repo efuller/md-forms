@@ -1,0 +1,12 @@
+.hero {
+	background-color: #512DA8;
+}
+
+.credit-card {
+	width: 86.6%;
+}
+
+input[type="submit"] {
+	background-color: #512DA8;
+	color: #ffffff;
+}
