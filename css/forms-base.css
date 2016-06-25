@@ -36,7 +36,7 @@ select {
 	outline: none;
 	padding: 10px 32px 10px 15px;
 	position: relative;
-	width: 100%;
+	width: auto;
 }
 
 select:focus {
@@ -269,5 +269,10 @@ a.button {
 
 .field-group-inline label {
 	display: block;
+	width: auto;
+}
+
+.field-inline {
+	display: inline-block;
 	width: auto;
 }
