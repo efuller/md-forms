@@ -15,6 +15,7 @@ legend {
 	font-weight: 700;
 }
 
+/* Radio buttons */
 input[type="radio"]:not(:checked) + label:before,
 input[type="radio"]:not(:checked) + label:after,
 input[type="radio"]:checked + label:before,
@@ -28,11 +29,28 @@ input[type="radio"]:checked + label:after {
 }
 
 input[type="text"].other {
+	height: 0;
 	margin-left: 35px;
 	margin-top: 5px;
+	padding: 0;
+	transition: visibility 0s, opacity 0.3s linear;
 	width: 90%;
 }
 
+/* Display the 'other' text box when checked! */
+#other:not(:checked)  + label ~ input[type="text"].other {
+	opacity: 0;
+	visibility: hidden;
+}
+
+#other:checked  + label ~ input[type="text"].other {
+	height: auto;
+	opacity: 1;
+	padding: 15px;
+	visibility: visible;
+}
+
+/* Submit button */
 input[type="submit"] {
 	background-color: #34495e;
 	color: #ffffff;
