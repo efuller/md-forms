@@ -2,6 +2,7 @@
 	background-color: #303F9F;
 }
 
+/* Check box */
 input[type="checkbox"]:not(:checked) + label:before,
 input[type="checkbox"]:not(:checked) + label:after,
 input[type="checkbox"]:checked + label:before,
@@ -13,6 +14,7 @@ input[type="checkbox"]:checked + label:after {
 	background-color: #303F9F;
 }
 
+/* Submit button */
 input[type="submit"] {
 	background-color: #303F9F;
 	color: #ffffff;
