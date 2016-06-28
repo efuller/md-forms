@@ -3,6 +3,12 @@ body {
 	background-size: cover;
 }
 
+.hero {
+	background-color: rgba(44,46,9, 0.85);
+	border: none;
+	box-shadow: 0 3px 5px rgba(0,0,0, 0.5);
+}
+
 input,
 input[type="text"],
 input[type="password"],
