@@ -27,7 +27,7 @@ fieldset {
 }
 
 select {
-	background: url(/images/arrow-down.svg) no-repeat right center;
+	background: url(../images/arrow-down.svg) no-repeat right center;
 	border: 2px solid #e0e0e0;
 	border-radius: 2px;
 	display: block;
