@@ -15,12 +15,14 @@
     <a href="../" class="hero-home-link">Forms Home</a>
     <div class="search-container">
         <div class="form-container">
-            <form>
+            <form id="search-form">
                 <div class="form-row">
                     <div class="field-group field-inline location">
-                        <input type="text" placeholder="Find an Outfitter Where?">
+                        <label for="search-input" class="screen-reader-text">Search</label>
+                        <input id="search-input" type="text" placeholder="Find an Outfitter Where?">
                     </div>
                     <div class="field-group field-inline species">
+                        <label for="species" class="screen-reader-text">Select Species</label>
                         <select name="species" id="species">
                             <option>Select Species</option>
                             <option value="antelope">Antelope</option>
@@ -32,7 +34,7 @@
                         </select>
                     </div>
                     <div class="field-group field-inline search">
-                        <input type="submit" value="Search">
+                        <input type="submit" disabled value="Search">
                     </div>
                 </div><!-- .form-row -->
             </form>
@@ -40,5 +42,7 @@
     </div><!-- .search-container -->
 </section>
 <section class="page-content"></section><!-- .page-content -->
+<script src="../js/validator.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
