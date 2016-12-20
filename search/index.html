@@ -18,13 +18,15 @@
             <form id="search-form">
                 <div class="form-row">
                     <div class="field-group field-inline location">
+                        <span class="message">Please enter a search term</span>
                         <label for="search-input" class="screen-reader-text">Search</label>
-                        <input id="search-input" type="text" placeholder="Find an Outfitter Where?">
+                        <input id="search-input" name="search-term" type="text" placeholder="Find an Outfitter Where?">
                     </div>
                     <div class="field-group field-inline species">
+                        <span class="message">Please select a species.</span>
                         <label for="species" class="screen-reader-text">Select Species</label>
                         <select name="species" id="species">
-                            <option>Select Species</option>
+                            <option value="">Select Species</option>
                             <option value="antelope">Antelope</option>
                             <option value="elk">Elk</option>
                             <option value="moose">Moose</option>
@@ -34,7 +36,7 @@
                         </select>
                     </div>
                     <div class="field-group field-inline search">
-                        <input type="submit" disabled value="Search">
+                        <input type="submit" value="Search">
                     </div>
                 </div><!-- .form-row -->
             </form>
