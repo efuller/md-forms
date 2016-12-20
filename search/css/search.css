@@ -83,10 +83,25 @@ input[type="text"] {
 .field-group {
 	float: left;
 	margin-bottom: 0;
+	position: relative;
 }
 
 .search-container {
 	position: absolute;
 	bottom: 0;
 	width: 100%;
+}
+
+/* Validation and Errors */
+.message {
+	background-color: #388E3C;
+	color: #FFF;
+	display: none;
+	font-size: 14px;
+	left: 0;
+	padding: 1px 8px;
+	min-width: 200px;
+	position: absolute;
+	text-align: left;
+	top: -24px;
 }
