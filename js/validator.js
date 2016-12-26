@@ -10,11 +10,9 @@
 	 * @returns {boolean}
 	 */
 	validator.isEmailAddress = function(input) {
-		// Bail if the parameter undefined, an empty string or not a string.
-		if (input === undefined || input === '') return false;
 
 		// Bail if not a string.
-		if (typeof input !== 'string') {
+		if (!input || typeof input !== 'string') {
 			return false;
 		}
 
@@ -139,6 +137,11 @@
 		var inputDate;
 		var referenceDate;
 
+		// Bail if no input or reference.
+		if (!input || !reference) {
+			return false;
+		}
+
 		// Bail if no input
 		if(!validator.isDate(input) || !validator.isDate(reference)) {
 			throw new Error('Please use two valid dates.');
@@ -163,6 +166,11 @@
 	validator.isAfterDate = function(input, reference) {
 		var inputDate;
 		var referenceDate;
+
+		// Bail if no input or reference.
+		if (!input || !reference) {
+			return false;
+		}
 
 		// Bail if no input
 		if(!validator.isDate(input) || !validator.isDate(reference)) {
@@ -189,6 +197,11 @@
 		var today = new Date().setHours(0,0,0,0); // Set today at 00:00:00
 		var dayInMilliSec = 24*60*60*1000; // Days in milliseconds
 		var difference;
+
+		// Bail if no date input provided.
+		if (!input) {
+			return false;
+		}
 
 		// Bail if no input
 		if(!validator.isDate(input)) {
@@ -218,6 +231,11 @@
 		var dayInMilliSec = 24*60*60*1000; // Days in milliseconds.
 		var difference;
 
+		// Bail if no date input provided.
+		if (!input) {
+			return false;
+		}
+
 		// Bail if no input
 		if(!isDate(input)) {
 			throw new Error('Please use a valid date.');
@@ -241,8 +259,9 @@
 	 * @returns {boolean}
 	 */
 	validator.isEmpty = function(input) {
+
 		// Bail if there is no input passed.
-		if(typeof input !== 'string') {
+		if(!input || typeof input !== 'string') {
 			return false;
 		}
 
@@ -276,7 +295,7 @@
 	validator.contains = function(input, wordsToFind) {
 		// Throw an error if no input or words array is provided
 		if(!input || !wordsToFind) {
-			throw new Error("Please provide both an input and an array of words.");
+			return false;
 		}
 
 		// Declare some variables
@@ -324,10 +343,18 @@
 		return wordMatches.length === wordsToFind.length;
 	};
 
+	/**
+	 * Check if an input does not contain any of the words within the provided array of words.
+	 *
+	 * @param input The string to check.
+	 * @param wordsToFind The words to check for in the provided string.
+	 *
+	 * @returns {boolean}
+	 */
 	validator.lacks = function(input, wordsToFind) {
 		// Throw an error if no input or words array is provided
 		if(!input || !wordsToFind) {
-			throw new Error("Please provide both an input and an array of words.");
+			return false;
 		}
 
 		// Declare some variables
@@ -384,7 +411,7 @@
 	validator.isComposedOf = function(input, strings) {
 		// Throw an error if no input or array of words are provided.
 		if(!input || !strings) {
-			throw new Error("Please provide both an input and an array of words.");
+			return false;
 		}
 
 		// Remove symbols from input.
@@ -428,9 +455,10 @@
 	 * @returns {boolean}
 	 */
 	validator.isLength = function(input, length) {
-		// Throw error is no input or length is passed in.
-		if(!input || !length)
-			throw new Error('Please provide an input and length.');
+		// Retrun false if no input or length is provided.
+		if(!input || !length) {
+			return false;
+		}
 
 		// Trim the input and compare lengths.
 		return input.trim().length <= length;
@@ -445,9 +473,11 @@
 	 * @returns {boolean}
 	 */
 	validator.isOfLength = function(input, length) {
-		// Throw error is no input or length is passed in.
-		if(!input || !length)
-			throw new Error('Please provide an input and length.');
+		// Retrun false if no input or length is provided.
+		if(!input || !length) {
+			return false;
+		}
+			// throw new Error('Please provide an input and length.');
 
 		return input.trim().length >= length;
 	};
@@ -519,7 +549,7 @@
 
 		// Throw an error if params aren't passed.
 		if(!input || !count) {
-			throw new Error('Please be sure to pass both a string and word count');
+			return false;
 		}
 
 		return validator.countWords(input) <= count;
@@ -537,7 +567,7 @@
 
 		// Throw an error if params aren't passed.
 		if (!input || !count) {
-			throw new Error('Please be sure to pass both a string and word count');
+			return false;
 		}
 
 		return validator.countWords(input) >= count;
@@ -556,7 +586,7 @@
 
 		// Throw an error if params are not provided.
 		if (!input || !floor || !ceil) {
-			throw new Error("Please provide an input, floor and ceil parameter.");
+			return false;
 		}
 
 		return ((input >= floor) && (input <= ceil));
@@ -575,7 +605,7 @@
 			"W","x","X","y","Y","z","Z"];
 
 		if (!input && input !== "") {
-			throw new Error("Please provide an input parameter.");
+			return false;
 		}
 
 		// If an empty string return true
