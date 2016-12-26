@@ -12,10 +12,22 @@ body {
 input,
 input[type="text"],
 input[type="password"],
-input[type="email"] {
+input[type="email"],
+input[type="date"] {
 	background: transparent;
 	border-color: rgba(255, 193, 7, 0.4);
 	color: #FFC107;
+}
+
+/* Remove the up/down arrows from the date input */
+input[type="date"]::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	display: none;
+}
+
+/* Set the background of the custom down arrow for date picker */
+input[type="date"]:hover::-webkit-calendar-picker-indicator {
+	background: transparent;
 }
 
 input:focus,
@@ -86,4 +98,12 @@ h1 {
 	background: rgba(44,46,9, 0.85);
 	margin: 0 auto;
 	padding: 55px 50px;
+}
+
+/* Validation */
+.validation-message {
+	background-color: #FFC107;
+	color: rgba(44,46,9, 0.85);
+	display: none;
+	padding: 0 10px;
 }
