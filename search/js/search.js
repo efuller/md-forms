@@ -29,52 +29,10 @@ window.EPF_SearchForm = {};
 		app.c.searchForm.addEventListener('submit', app.validate);
 
 		// Search input event listener.
-		app.c.searchInput.addEventListener('keyup', app.resetInputMessage);
+		app.c.searchInput.addEventListener('keyup', helpers.resetInputMessage);
 
 		// Select change event listener.
-		app.c.species.addEventListener('change', app.resetInputMessage);
-	};
-
-	/**
-	 * Hide the message element.
-	 *
-	 * @param el The input element.
-	 */
-	app.hideMessage = function(el) {
-		var messageElement = helpers.getMessageElement(el, '.message');
-
-		el.classList.remove('invalid');
-		messageElement.innerHTML = '';
-		messageElement.style.display = 'none';
-	};
-
-	/**
-	 * Show the validation message.
-	 *
-	 * @param el The element we are validating.
-	 * @param message The message to display.
-	 */
-	app.showMessage = function(el, message) {
-		var messageElement = helpers.getMessageElement(el, '.message');
-
-		el.classList.add('invalid');
-		messageElement.style.display =  'block';
-		messageElement.innerHTML = message;
-	};
-
-	/**
-	 * Reset the validation message.
-	 *
-	 * @returns {boolean}
-	 */
-	app.resetInputMessage = function() {
-
-		if (!this.classList.contains('invalid') || validator.isEmpty(this.value)) {
-			return false;
-		}
-
-		// Hide the validation message.
-		app.hideMessage(this);
+		app.c.species.addEventListener('change', helpers.resetInputMessage);
 	};
 
 	/**
@@ -95,12 +53,12 @@ window.EPF_SearchForm = {};
 
 		// Validate the search input.
 		if (validator.isEmpty(searchValue)) {
-			app.showMessage(app.c.searchInput, 'Please enter a search term.');
+			helpers.showMessage(app.c.searchInput, 'Please enter a search term.');
 		}
 
 		// Validate the species select.
 		if (validator.isEmpty(species)) {
-			app.showMessage(app.c.species, 'Please select a species.');
+			helpers.showMessage(app.c.species, 'Please select a species.');
 		}
 	};
 
