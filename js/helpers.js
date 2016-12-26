@@ -20,9 +20,10 @@
 	 * Hide the message element.
 	 *
 	 * @param el The input element.
+	 * @param className The class name of the validation element to be hidden.
 	 */
-	helpers.hideMessage = function(el) {
-		var messageElement = helpers.getMessageElement(el, '.message');
+	helpers.hideMessage = function(el, className) {
+		var messageElement = helpers.getMessageElement(el, className);
 
 		el.classList.remove('invalid');
 		messageElement.innerHTML = '';
@@ -33,10 +34,11 @@
 	 * Show the validation message.
 	 *
 	 * @param el The element we are validating.
+	 * @param className The class of the validation message element.
 	 * @param message The message to display.
 	 */
-	helpers.showMessage = function(el, message) {
-		var messageElement = helpers.getMessageElement(el, '.message');
+	helpers.showMessage = function(el, className, message) {
+		var messageElement = helpers.getMessageElement(el, className);
 
 		el.classList.add('invalid');
 		messageElement.style.display =  'block';
@@ -44,18 +46,36 @@
 	};
 
 	/**
-	 * Reset the validation message.
+	 * Check to see of a specified age.
+	 *
+	 * @param dob The date of birth.
+	 * @param age Minimum age you want to check for.
 	 *
 	 * @returns {boolean}
 	 */
-	helpers.resetInputMessage = function() {
+	helpers.isOfAge = function(dob, age) {
+		var today = new Date();
+		var birthDate = new Date(dob);
 
-		if (!this.classList.contains('invalid') || validator.isEmpty(this.value)) {
+		// Bail if no date of birth or age.
+		if(!dob || !age) {
 			return false;
 		}
 
-		// Hide the validation message.
-		helpers.hideMessage(this);
+		// Return.
+		return (today.getYear() - birthDate.getYear()) >= age;
+	};
+
+	/**
+	 * Compare two passwords and see if they are equal.
+	 *
+	 * @param password First password.
+	 * @param confirmPassword Second password;
+	 *
+	 * @returns {boolean}
+	 */
+	helpers.comparePasswords = function(password, confirmPassword) {
+		return password === confirmPassword;
 	};
 
 	// Return a window object
