@@ -1,5 +1,5 @@
 window.EPF_SearchForm = {};
-(function(window, document, app, validator) {
+(function(window, document, app, validator, helpers) {
 
 	/**
 	 * Initialize validation.
@@ -36,23 +36,12 @@ window.EPF_SearchForm = {};
 	};
 
 	/**
-	 * Get the message element for a supplied input.
-	 *
-	 * @param el The input element.
-	 * @returns {Element}
-	 */
-	app.getMessageElement = function(el) {
-		var parent = el.parentNode;
-		return parent.querySelector( '.message' );
-	};
-
-	/**
 	 * Hide the message element.
 	 *
 	 * @param el The input element.
 	 */
 	app.hideMessage = function(el) {
-		var messageElement = app.getMessageElement(el);
+		var messageElement = helpers.getMessageElement(el, '.message');
 
 		el.classList.remove('invalid');
 		messageElement.innerHTML = '';
@@ -66,7 +55,7 @@ window.EPF_SearchForm = {};
 	 * @param message The message to display.
 	 */
 	app.showMessage = function(el, message) {
-		var messageElement = app.getMessageElement(el);
+		var messageElement = helpers.getMessageElement(el, '.message');
 
 		el.classList.add('invalid');
 		messageElement.style.display =  'block';
@@ -116,4 +105,4 @@ window.EPF_SearchForm = {};
 	};
 
 	app.init();
-})(window, document, window.EPF_SearchForm, validator);
+})(window, document, window.EPF_SearchForm, validator, helpers);
