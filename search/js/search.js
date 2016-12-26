@@ -29,10 +29,25 @@ window.EPF_SearchForm = {};
 		app.c.searchForm.addEventListener('submit', app.validate);
 
 		// Search input event listener.
-		app.c.searchInput.addEventListener('keyup', helpers.resetInputMessage);
+		app.c.searchInput.addEventListener('keyup', app.resetInputMessage);
 
 		// Select change event listener.
-		app.c.species.addEventListener('change', helpers.resetInputMessage);
+		app.c.species.addEventListener('change', app.resetInputMessage);
+	};
+
+	/**
+	 * Reset the validation message.
+	 *
+	 * @returns {boolean}
+	 */
+	app.resetInputMessage = function() {
+
+		if (!this.classList.contains('invalid') || validator.isEmpty(this.value)) {
+			return false;
+		}
+
+		// Hide the validation message.
+		helpers.hideMessage(this, '.message');
 	};
 
 	/**
@@ -53,12 +68,12 @@ window.EPF_SearchForm = {};
 
 		// Validate the search input.
 		if (validator.isEmpty(searchValue)) {
-			helpers.showMessage(app.c.searchInput, 'Please enter a search term.');
+			helpers.showMessage(app.c.searchInput, '.message', 'Please enter a search term.');
 		}
 
 		// Validate the species select.
 		if (validator.isEmpty(species)) {
-			helpers.showMessage(app.c.species, 'Please select a species.');
+			helpers.showMessage(app.c.species,  '.message', 'Please select a species.');
 		}
 	};
 
