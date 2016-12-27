@@ -61,3 +61,18 @@ input[type="submit"]:hover,
 input[type="submit"]:focus {
 	background-color: #34495e;
 }
+
+input:disabled,
+input:disabled:hover {
+	background-color: rgba(97, 135, 174, 0.38);
+	cursor: default;
+}
+
+.validation-message {
+	background-color: #34495e;
+	color: #FFFFFF;
+	display: none;
+	margin-left: 35px;
+	padding: 0 10px;
+	width: 90%;
+}

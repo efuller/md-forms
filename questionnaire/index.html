@@ -15,7 +15,7 @@
     <a href="../" class="hero-home-link">Forms Home</a>
 </section>
 <div class="form-container">
-    <form>
+    <form id="question-form">
         <fieldset>
             <legend>What progressive metal band do you like most?</legend>
             <div class="form-row">
@@ -30,16 +30,20 @@
                     <label for="periphery">Periphery</label>
                     <input id="other" type="radio" name="band" value="other">
                     <label for="other">Other</label>
-                    <input id="other-text" type="text" class="other" name="band" placeholder="If other, enter band here.">
+                    <input id="other-text" type="text" class="other" name="other" placeholder="If other, enter band here.">
+                    <span class="validation-message"></span>
                 </div>
             </div>
             <div class="form-row">
                 <div class="field-group">
-                    <input type="submit" value="Submit">
+                    <input id="submit" type="submit" disabled value="Submit">
                 </div>
             </div>
         </fieldset>
     </form>
 </div>
+<script src="../js/helpers.js"></script>
+<script src="../js/validator.js"></script>
+<script src="js/questionnaire.js"></script>
 </body>
 </html>
