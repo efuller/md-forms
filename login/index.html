@@ -15,17 +15,19 @@
     <a href="../" class="hero-home-link">Forms Home</a>
 </section>
 <div class="form-container">
-    <form>
+    <form id="login">
         <div class="form-row">
             <div class="field-group">
                 <label for="username">Username:</label>
                 <input id="username" type="text" name="username" placeholder="Username">
+                <span class="validation-message"></span>
             </div>
         </div>
         <div class="form-row">
             <div class="field-group">
                 <label for="password">Password</label>
                 <input id="password" type="password" name="password" placeholder="Password">
+                <span class="validation-message"></span>
             </div>
         </div>
         <div class="form-row">
@@ -41,5 +43,8 @@
         </div>
     </form>
 </div><!-- .form-container -->
+<script src="../js/validator.js"></script>
+<script src="../js/helpers.js"></script>
+<script src="js/login.js"></script>
 </body>
 </html>

@@ -24,3 +24,10 @@ input[type="submit"]:hover,
 input[type="submit"]:focus {
 	background-color: #303F9F;
 }
+
+.validation-message {
+	background-color: #303F9F;
+	color: #FFFFFF;
+	display: none;
+	padding: 0 10px;
+}
