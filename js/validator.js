@@ -226,29 +226,13 @@
 	 * @returns {boolean}
 	 */
 	validator.isAfterToday = function(input) {
-		var inputDate;
-		var today = new Date().setHours(23,59,59,999); // Set today at 12:59:59 PM
-		var dayInMilliSec = 24*60*60*1000; // Days in milliseconds.
-		var difference;
-
 		// Bail if no date input provided.
-		if (!input) {
+		if (!input || typeof input !== 'string' || !validator.isDate(input)) {
 			return false;
 		}
 
-		// Bail if no input
-		if(!isDate(input)) {
-			throw new Error('Please use a valid date.');
-		}
-
-		// Create a Date from the param
-		inputDate = new Date(input).getTime();
-
-		// Calculate difference in milliseconds
-		difference = (inputDate - today) / dayInMilliSec;
-
 		// Return
-		return difference >= 0;
+		return new Date(input) > new Date();
 	};
 
 	/**
@@ -261,7 +245,7 @@
 	validator.isEmpty = function(input) {
 
 		// Bail if there is no input passed.
-		if(!input || typeof input !== 'string') {
+		if(typeof input !== 'string') {
 			return false;
 		}
 
