@@ -10,3 +10,15 @@ input[type="submit"] {
 	background-color: #512DA8;
 	color: #ffffff;
 }
+
+.validation-message,
+#card-expired {
+	display: none;
+	background-color: #512DA8;
+	color: #ffffff;
+	padding: 0 10px;
+}
+
+#card-expired {
+	margin-bottom: 10px;
+}

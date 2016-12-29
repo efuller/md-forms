@@ -15,23 +15,26 @@
     <a href="../" class="hero-home-link">Forms Home</a>
 </section>
 <div class="form-container">
-    <form>
+    <form id="credit-card">
         <div class="form-row">
             <div class="form-row">
                 <div class="field-group">
                     <label for="full-name">Full Name</label>
                     <input id="full-name" type="text" name="full-name" placeholder="John Doe">
+                    <span class="validation-message"></span>
                 </div>
             </div>
             <div class="form-row">
                 <div class="field-group-inline credit-card">
                     <label for="card-number">Card Number</label>
-                    <input id="card-number" class="field-inline" type="text" name="card-number" required maxlength="19" size="19"
+                    <input id="card-number" class="field-inline" type="text" name="card-number"  maxlength="19" size="19"
                            placeholder="1234 3456 2467 2346">
+                    <span class="validation-message"></span>
                 </div>
                 <div class="field-group-inline last">
-                    <label for="cvc">CSV</label>
-                    <input id="cvc" class="field-inline" type="text" name="cvc" required maxlength="3" size="3" placeholder="123">
+                    <label for="cvc">CVC</label>
+                    <input id="cvc" class="field-inline" type="text" name="cvc" maxlength="3" size="3" placeholder="123">
+                    <span class="validation-message"></span>
                 </div>
             </div>
             <div class="form-row">
@@ -39,6 +42,7 @@
                 <div class="field-group-inline">
                     <label for="month">Month</label>
                     <select name="month" id="month" class="field-inline">
+                        <option value="">Month</option>
                         <option value="01">January</option>
                         <option value="02">February</option>
                         <option value="03">March</option>
@@ -52,11 +56,12 @@
                         <option value="11">November</option>
                         <option value="12">December</option>
                     </select>
+                    <span class="validation-message"></span>
                 </div>
                 <div class="field-group-inline">
                     <label for="Year">Year</label>
                     <select name="year" id="year" class="field-inline">
-                        <option>Year</option>
+                        <option value="">Year</option>
                         <option value="2016">2016</option>
                         <option value="2017">2017</option>
                         <option value="2018">2018</option>
@@ -78,15 +83,20 @@
                         <option value="2034">2034</option>
                         <option value="2035">2035</option>
                     </select>
+                    <span class="validation-message"></span>
                 </div>
             </div>
             <div class="form-row">
                 <div class="field-group">
-                    <input type="submit" value="Submit">
+                     <span id="card-expired" class="validation-message"></span>
+                    <input id="submit" type="submit" value="Submit">
                 </div>
             </div>
         </div>
     </form>
 </div>
+<script src="../js/helpers.js"></script>
+<script src="../js/validator.js"></script>
+<script src="js/credit-card.js"></script>
 </body>
 </html>
