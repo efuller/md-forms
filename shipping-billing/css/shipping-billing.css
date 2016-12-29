@@ -1,3 +1,7 @@
+.form-container {
+	max-width: 640px;
+}
+
 .hero {
 	background-color: #F57C00;
 }
@@ -49,4 +53,11 @@
 input[type="submit"] {
 	background-color: #F57C00;
 	color: #ffffff;
+}
+
+.validation-message {
+	display: none;
+	background-color: #F57C00;
+	color: #FFFFFF;
+	padding: 0 10px;
 }

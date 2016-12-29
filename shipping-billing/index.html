@@ -15,42 +15,47 @@
     <a href="../" class="hero-home-link">Forms Home</a>
 </section>
 <div class="form-container">
-    <form>
+    <form id="shipping-billing">
         <fieldset class="billing-info">
             <legend>Billing Information</legend>
             <div class="form-row">
                 <div class="field-group">
                     <label for="billing-first-name">First Name</label>
                     <input id="billing-first-name" type="text" name="billing-first-name" placeholder="First Name">
+                    <span class="validation-message"></span>
                 </div>
             </div>
             <div class="form-row">
                 <div class="field-group">
                     <label for="billing-last-name">Last Name</label>
                     <input id="billing-last-name" type="text" name="billing-last-name" placeholder="Last Name">
+                    <span class="validation-message"></span>
                 </div>
             </div>
             <div class="form-row">
                 <div class="field-group">
                     <label for="billing-address-1">Address Line 1</label>
                     <input id="billing-address-1" type="text" name="billing-address-1" placeholder="Address 1">
+                    <span class="validation-message"></span>
                 </div>
             </div>
             <div class="form-row">
                 <div class="field-group">
                     <label for="billing-address-2">Address Line 2</label>
                     <input id="billing-address-2" type="text" name="billing-address-2" placeholder="Address 2">
+                    <span class="validation-message"></span>
                 </div>
             </div>
             <div class="form-row">
                 <div class="field-group-inline">
                     <label for="billing-city">City</label>
                     <input id="billing-city" type="text" class="field-inline" name="billing-city" placeholder="City">
+                    <span class="validation-message"></span>
                 </div>
                 <div class="field-group-inline">
                     <label for="billing-state">State</label>
                     <select id="billing-state" name="billing-state" class="field-inline">
-                        <option>State</option>
+                        <option value="">State</option>
                         <option value="AL">Alabama</option>
                         <option value="AK">Alaska</option>
                         <option value="AZ">Arizona</option>
@@ -103,17 +108,19 @@
                         <option value="WI">Wisconsin</option>
                         <option value="WY">Wyoming</option>
                     </select>
+                    <span class="validation-message"></span>
                 </div>
                 <div class="field-group-inline zip">
                     <label for="billing-zip">Zip</label>
                     <input id="billing-zip" type="text" class="field-inline" name="billing-zip" placeholder="Zip">
+                    <span class="validation-message"></span>
                 </div>
             </div>
             <div class="form-row">
                 <div class="field-group">
                     <label for="billing-country">Country</label>
                     <select id="billing-country" name="billing-country">
-                        <option>Country</option>
+                        <option value="">Country</option>
                         <option value="AF">Afghanistan</option>
                         <option value="AX">Åland Islands</option>
                         <option value="AL">Albania</option>
@@ -364,6 +371,7 @@
                         <option value="ZM">Zambia</option>
                         <option value="ZW">Zimbabwe</option>
                     </select>
+                    <span class="validation-message"></span>
                 </div>
             </div>
         </fieldset>
@@ -379,35 +387,40 @@
                 <div class="field-group">
                     <label for="shipping-first-name">First Name</label>
                     <input id="shipping-first-name" type="text" name="shipping-first-name" placeholder="First Name">
+                    <span class="validation-message"></span>
                 </div>
             </div>
             <div class="form-row">
                 <div class="field-group">
                     <label for="shipping-last-name">Last Name</label>
                     <input id="shipping-last-name" type="text" name="shipping-last-name" placeholder="Last Name">
+                    <span class="validation-message"></span>
                 </div>
             </div>
             <div class="form-row">
                 <div class="field-group">
                     <label for="shipping-address-1">Address Line 1</label>
                     <input id="shipping-address-1" type="text" name="shipping-address-1" placeholder="Address 1">
+                    <span class="validation-message"></span>
                 </div>
             </div>
             <div class="form-row">
                 <div class="field-group">
                     <label for="shipping-address-2">Address Line 2</label>
                     <input id="shipping-address-2" type="text" name="shipping-address-2" placeholder="Address 2">
+                    <span class="validation-message"></span>
                 </div>
             </div>
             <div class="form-row">
                 <div class="field-group-inline">
                     <label for="shipping-city">City</label>
                     <input id="shipping-city" type="text" class="field-inline" name="shipping-city" placeholder="City">
+                    <span class="validation-message"></span>
                 </div>
                 <div class="field-group-inline">
                     <label for="shipping-state">State</label>
                     <select id="shipping-state" name="shipping-state" class="field-inline">
-                        <option>State</option>
+                        <option value="">State</option>
                         <option value="AL">Alabama</option>
                         <option value="AK">Alaska</option>
                         <option value="AZ">Arizona</option>
@@ -460,17 +473,19 @@
                         <option value="WI">Wisconsin</option>
                         <option value="WY">Wyoming</option>
                     </select>
+                    <span class="validation-message"></span>
                 </div>
                 <div class="field-group-inline zip">
                     <label for="shipping-zip">Zip</label>
                     <input id="shipping-zip" type="text" class="field-inline" name="shipping-zip" placeholder="Zip">
+                    <span class="validation-message"></span>
                 </div>
             </div>
             <div class="form-row">
                 <div class="field-group">
                     <label for="shipping-country">Country</label>
                     <select id="shipping-country" name="shipping-country">
-                        <option>Country</option>
+                        <option value="">Country</option>
                         <option value="AF">Afghanistan</option>
                         <option value="AX">Åland Islands</option>
                         <option value="AL">Albania</option>
@@ -721,6 +736,7 @@
                         <option value="ZM">Zambia</option>
                         <option value="ZW">Zimbabwe</option>
                     </select>
+                    <span class="validation-message"></span>
                 </div>
             </div>
             <div class="form-row">
@@ -731,5 +747,8 @@
         </fieldset>
     </form>
 </div>
+<script src="../js/helpers.js"></script>
+<script src="../js/validator.js"></script>
+<script src="js/shipping-billing.js"></script>
 </body>
 </html>
