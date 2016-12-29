@@ -267,7 +267,7 @@ window.EPF_ShippingBilling = {};
 		}
 
 		// Must be 5 digits long.
-		if (!validator.isOfLength(billingZip, 5)) {
+		if (billingZip.length !== 5) {
 			helpers.showMessage(app.c.billingZip, app.config.validationClass, 'Please enter 5 digits.');
 			return false;
 		}
