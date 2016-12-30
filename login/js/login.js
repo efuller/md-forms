@@ -36,6 +36,7 @@ window.EPF_LoginForm = {};
 		// Validate form on submit.
 		app.c.form.addEventListener('submit', app.validate);
 
+		// Reset validation messages.
 		app.c.userName.addEventListener('keyup', app.resetInputMessage);
 		app.c.password.addEventListener('keyup', app.resetInputMessage);
 	};

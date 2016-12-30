@@ -250,6 +250,11 @@ window.EPF_ShippingBilling = {};
 		return true;
 	};
 
+	/**
+	 * Validate zip code input.
+	 *
+	 * @returns {boolean}
+	 */
 	app.validateZip = function() {
 		var billingZip = app.c.billingZip.value;
 		var shippingZip = app.c.shippingZip.value;

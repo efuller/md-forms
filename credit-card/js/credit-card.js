@@ -195,6 +195,11 @@ window.EPF_CreditCard = {};
 		return true;
 	};
 
+	/**
+	 * Calculate credit card expiration.
+	 *
+	 * @returns {boolean}
+	 */
 	app.validateExpiration = function() {
 		var month = app.c.month.value;
 		var year = app.c.year.value;

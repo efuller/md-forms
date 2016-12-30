@@ -69,6 +69,11 @@ window.EPF_Questionnaire = {};
 		app.c.submitBtn.disabled = false;
 	};
 
+	/**
+	 * Validate other text field.
+	 *
+	 * @returns {boolean}
+	 */
 	app.validateOtherText = function() {
 		var otherText = app.c.otherText.value;
 
